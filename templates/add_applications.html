@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить заявку</title>
+</head>
+<body>
+    <h1>Добавить заявку</h1>
+    <form method="POST">
+        <label for="equipment_type">Вид оргтехники:</label>
+        <input type="text" name="equipment_type" required><br>
+        
+        <br><label for="model">Модель:</label>
+        <input type="text" name="model" required><br>
+        
+        <br><label for="problem_description">Описание проблемы:</label>
+        <br><textarea name="problem_description" required></textarea><br>
+        
+        <br><label for="client_name">ФИО клиента:</label>
+        <input type="text" name="client_name" required><br>
+        
+        <br><label for="phone_number">Номер телефона:</label>
+        <input type="text" name="phone_number" required><br>
+        
+        <br><label for="status">Статус заявки:</label>
+        <select name="status">
+            <option value="Новая заявка">Новая заявка</option>
+            <option value="В процессе ремонта">В процессе ремонта</option>
+            <option value="Завершена">Завершена</option>
+        </select><br>
+        
+        <br>  <input type="submit" value="Добавить">
+    </form>
+    <br><a href="{{ url_for('index') }}">Назад к списку заявок</a>
+</body>
+</html>
+
